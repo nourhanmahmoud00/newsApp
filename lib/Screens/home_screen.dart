@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          ArticleListview()
+          ArticleListview(category: "general",)
 
           
         ],

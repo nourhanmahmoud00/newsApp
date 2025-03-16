@@ -11,8 +11,7 @@ class newsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        routes: { "S2": (context)=> HomeScreen ()
-        ,"S2": (context)=> Newsscreen (),},
+
       debugShowCheckedModeBanner: false,
       home: const HomeScreen()
     );
