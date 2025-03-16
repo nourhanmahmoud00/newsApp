@@ -15,11 +15,11 @@ class _ArticleListviewState extends State<ArticleListview> {
   List<Article>? x;
   void initState() {
     super.initState();
-    getNews();}
+    getNews(category: '');}
 
-  getNews() async {
+  getNews({ required String category }) async{
     ApiService apiService = ApiService();
-    x = await apiService.get();
+    x = await apiService.get(category: category);
     setState(() {});
   }
 

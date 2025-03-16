@@ -21,11 +21,11 @@ class _NewsscreenState extends State<Newsscreen> {
 
   @override
   Widget build(BuildContext context) {
-    final String category =
-        ModalRoute.of(context)!.settings.arguments as String;
+    final String category = ModalRoute.of(context)!.settings.arguments as String;
+
     _getArticles() async {
       {
-        final articles = await ApiService().get();
+        final articles = await ApiService().get(category: category);
         setState(() {
           filteredArticles =
               articles
